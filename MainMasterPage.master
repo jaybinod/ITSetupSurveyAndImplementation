@@ -1,0 +1,74 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MainMasterPage.master.cs" Inherits="MainMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> </title>
+    <link href="style.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="Head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+    <form runat="server">
+
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+
+        <header class="header-area">
+
+            <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">AIFA</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="dashboard.aspx">Home</a></li>
+        <li><a href="ListofSuppliers.aspx">List Supplier</a></li>
+          <li><a href="ListofDefaulter.aspx">List Defaulter Dealer</a></li>
+          <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Dealers <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="ListofDealers.aspx">My Dealer List</a></li>
+            <li><a href="DealerAdd.aspx">New</a></li>
+            
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+          <li><a href="ChangePassword.aspx">Change Password</a></li>
+          <li><a href="logout.aspx"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+       
+    </header>
+        <!-- ##### Header Area End ##### -->
+        <section class="section-padding-60">
+        <div class="container-fluid" >
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            
+           
+        </div>
+            <footer>
+             <p>  Copyright &copy; <%: DateTime.Now.Year %>. All rights reserved </p>
+            </footer>
+    </section>
+         
+    </form>
+</body>
+</html>

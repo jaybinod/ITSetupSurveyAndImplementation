@@ -1,0 +1,53 @@
+﻿/* Move down content because we have a fixed navbar that is 50px tall */
+/*body {
+    padding-top: 0px;
+    padding-bottom: 20px;
+}*/
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+/*.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}*/
+
+.dgcontent
+{
+    padding: 10px;
+}
+/* Set widths on the form inputs since otherwise they're 100% wide */
+
+
+.MyLoginpanel {
+        margin-bottom: 20px;
+        background-color: #f5f4e7;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+        padding: 5px;
+        margin-left:auto;
+        width:500px;
+margin-right:auto; 
+    }
+
+/* Responsive: Portrait tablets and up */
+@media screen and (max-width: 1000px) {
+    .jumbotron {
+        margin-top: 20px;
+    }
+
+    .body-content {
+        padding: 0;
+    }
+
+    .MyLoginpanel {
+        width:100%;
+    }    
+}
+
+
+.lineheight
+{
+    line-height:10px;
+}
